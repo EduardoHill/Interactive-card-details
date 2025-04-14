@@ -7,6 +7,42 @@
     <link rel="stylesheet" href="./assets/style.css" />
   </head>
   <body>
+    <div id="app">
+      <div id="Cards">
+        <div id="CardFront">
+          <img src="./images/card-logo.svg" alt="" />
+          <h1 id="CardNumber">9591 6489 6389 101E</h1>
+          <div id="TextArea">
+            <h4>Felicia Leire</h4>
+            <h4>09/00</h4>
+          </div>
+        </div>
+        <div id="CardBack">
+          <span>000</span>
+        </div>
+      </div>
+      <form>
+        <label>CARDHOLDER NAME</label><br />
+        <input type="text" /><br />
+        <label>CARD NUMBER</label><br />
+        <input type="number" />
+        <div>
+          <div>
+            <label>EXP. DATE (MM/YY)</label>
+            <div>
+              <input type="number" />
+              <input type="number" />
+            </div>
+          </div>
+          <div>
+            <label for="">CVC</label><br />
+            <input type="number" />
+          </div>
+        </div>
+        <button type="submit">Confirm</button>
+      </form>
+    </div>
+
     <script src="./assets/main.js"></script>
   </body>
 </html>
