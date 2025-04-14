@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  background-image: url(/images/bg-main-desktop.png);
+  background-size: 30% auto;
+  background-position: left;
+  background-repeat: no-repeat;
+}
+#app {
+  display: flex;
+
+  gap: 9.375rem;
+}

@@ -1,0 +1,20 @@
+#CardFront {
+  background-image: url(/images/bg-card-front.png);
+
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 1.25rem;
+  border-radius: 10px;
+  color: #fff;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 500px;
+  height: 300px;
+}
+#CardFront img {
+  width: 25px;
+  height: 25px;
+  object-fit: cover;
+}
