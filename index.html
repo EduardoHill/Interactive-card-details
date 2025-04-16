@@ -10,20 +10,20 @@
     <div id="app">
       <div id="Cards">
         <div id="CardFront">
-          <img src="./images/card-logo.svg" alt="" />
+          <img src="./images/card-logo.svg" alt="" id="cardLogo" />
           <div class="spans">
-            <span>0000</span>
-            <span>0000</span>
-            <span>0000</span>
-            <span>0000</span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
           </div>
           <div id="TextArea">
-            <h4>Felicia Leire</h4>
-            <h4>09/00</h4>
+            <h4 id="nameCard"></h4>
+            <h4 id="dataCard"></h4>
           </div>
         </div>
         <div id="CardBack">
-          <div><span>000</span></div>
+          <div><span id="CardCVC"></span></div>
         </div>
       </div>
       <form>
@@ -56,7 +56,7 @@
             <p>Can't be blank</p>
           </div>
         </div>
-        <button type="submit">Confirm</button>
+        <button type="submit" id="Confirm">Confirm</button>
       </form>
     </div>
 

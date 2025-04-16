@@ -1,0 +1,40 @@
+@media (max-width: 768px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid red;
+
+    height: 100%;
+    background-position-y: top;
+    background-size: 100% 45%;
+  }
+  #app {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    gap: 200px;
+  }
+  #Cards {
+    align-items: center;
+    margin-top: 80%;
+    display: flex;
+    width: 100vw;
+  }
+  #CardFront {
+    position: absolute;
+    margin-top: 50px;
+    margin-left: -50px;
+  }
+  #CardBack {
+    margin-left: 0;
+    margin-top: -115px;
+    margin-right: -150px;
+  }
+  #Second {
+    justify-content: start;
+  }
+
+  #inputEXP input {
+    width: auto;
+  }
+}
