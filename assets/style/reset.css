@@ -10,7 +10,7 @@ body {
   justify-content: center;
   height: 100vh;
 
-  background-image: url('../../images/bg-main-desktop.png');
+  background-image: url("../images/bg-main-desktop.png");
   background-size: 30% 100%;
   background-position: left;
   background-repeat: no-repeat;
