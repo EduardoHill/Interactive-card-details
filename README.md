@@ -1,4 +1,4 @@
-# 🏠 Weather App
+# 🏠 Interactive card details
 
 ![Preview do site](./assets/images/Captura%20de%20tela%202025-05-14%20172738.png)
 
