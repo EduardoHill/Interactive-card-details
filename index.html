@@ -1,65 +1,147 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>interactive-card-details</title>
-    <link rel="stylesheet" href="./assets/style/style.css" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <title>Frontend Mentor | Interactive card details form</title>
   </head>
   <body>
-    <div id="app">
-      <div id="Cards">
-        <div id="CardFront">
-          <img src="./images/card-logo.svg" alt="" id="cardLogo" />
-          <div class="spans">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <div id="TextArea">
-            <h4 id="nameCard"></h4>
-            <h4 id="dataCard"></h4>
-          </div>
-        </div>
-        <div id="CardBack">
-          <div><span id="CardCVC"></span></div>
-        </div>
-      </div>
-      <form>
-        <div id="inputNAME">
-          <label>CARDHOLDER NAME</label>
-          <input type="text" id="name" placeholder="e.g. Jane Appleseed" />
-          <p>Can't be blank</p>
-        </div>
-        <div id="inputCARD">
-          <label>CARD NUMBER</label>
-          <input
-            type="number"
-            id="cardNumber"
-            placeholder="e.g. 1234 5678 9123 0000"
+    <main id="app">
+      <section class="container-bg" aria-label="Visualização do cartão">
+        <article
+          class="card-front"
+          role="img"
+          aria-label="Frente do cartão de crédito"
+        >
+          <img
+            id="card-logo"
+            src="./images/card-logo.svg"
+            alt="Logo da bandeira do cartão"
           />
-          <p>Can't be blank</p>
-        </div>
-        <div id="Second">
-          <div id="inputEXP">
-            <label>EXP. DATE (MM/YY)</label>
-            <div>
-              <input type="number" id="mes" placeholder="MM" />
-              <input type="number" id="ano" placeholder="YY" />
-            </div>
-            <p>Can't be blank</p>
-          </div>
-          <div id="inputCVC">
-            <label for="">CVC</label>
-            <input type="number" id="CVC" placeholder="e.g. 123" />
-            <p>Can't be blank</p>
-          </div>
-        </div>
-        <button type="submit" id="Confirm">Confirm</button>
-      </form>
-    </div>
 
-    <script src="./assets/main.js"></script>
+          <div class="card-number" aria-label="Número do cartão">
+            <span>0000</span>
+            <span>0000</span>
+            <span>0000</span>
+            <span>0000</span>
+          </div>
+
+          <div class="card-info">
+            <span aria-label="Nome do titular">Cardholder Name</span>
+            <span aria-label="Data de expiração">00/00</span>
+          </div>
+        </article>
+
+        <article
+          class="card-back"
+          role="img"
+          aria-label="Verso do cartão de crédito"
+        >
+          <span aria-label="Código de segurança CVC">000</span>
+        </article>
+      </section>
+
+      <section class="container-main">
+        <header>
+          <h1 class="visually-hidden">Formulário de Detalhes do Cartão</h1>
+        </header>
+
+        <form aria-label="Formulário de detalhes do cartão">
+          <fieldset class="group-input">
+            <label for="cardholderName">CARDHOLDER NAME</label>
+
+            <input
+              type="text"
+              id="cardholderName"
+              placeholder="e.g. Jane Appleseed"
+              maxlength="30"
+              required
+              aria-describedby="cardholderName-error"
+            />
+            <span
+              id="cardholderName-error"
+              class="error-message"
+              role="alert"
+            ></span>
+          </fieldset>
+
+          <fieldset class="group-input">
+            <label for="cardNumber">CARD NUMBER</label>
+
+            <input
+              type="text"
+              id="cardNumber"
+              placeholder="e.g. 1234 5678 9123 0000"
+              maxlength="19"
+              required
+              aria-describedby="cardNumber-error"
+              autocomplete="cc-number"
+            />
+            <span
+              id="cardNumber-error"
+              class="error-message"
+              role="alert"
+            ></span>
+          </fieldset>
+
+          <div class="group-footer">
+            <fieldset class="group-input">
+              <legend>EXP. DATE (MM/YY)</legend>
+
+              <div class="group-expDate">
+                <input
+                  type="text"
+                  id="expDateMM"
+                  placeholder="MM"
+                  maxlength="2"
+                  required
+                  aria-label="Mês de expiração"
+                  autocomplete="cc-exp-month"
+                />
+                <input
+                  type="text"
+                  id="expDateYY"
+                  placeholder="YY"
+                  maxlength="2"
+                  required
+                  aria-label="Ano de expiração"
+                  autocomplete="cc-exp-year"
+                />
+              </div>
+            </fieldset>
+
+            <fieldset class="group-input">
+              <label for="cvc">CVC</label>
+
+              <input
+                type="text"
+                id="cvc"
+                placeholder="e.g. 123"
+                maxlength="4"
+                required
+                aria-describedby="cvc-error"
+                autocomplete="cc-csc"
+              />
+              <span id="cvc-error" class="error-message" role="alert"></span>
+            </fieldset>
+          </div>
+
+          <button type="submit">Confirm</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="./js/main.js"></script>
   </body>
 </html>
